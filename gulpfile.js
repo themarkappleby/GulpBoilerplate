@@ -7,7 +7,8 @@ gulp.task('build', [
   'vendor:styles',
   'scripts',
   'vendor:scripts',
-  'templates'
+  'templates',
+  'revision'
 ]);
 
 gulp.task('default', ['build', 'server', 'watch']);

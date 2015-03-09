@@ -1,0 +1,1 @@
+{"version":3,"sources":["styles.styl"],"names":[],"mappings":"AAEA,KACE,gBAAY,CAAA","file":"styles.css","sourcesContent":["bgcol = red\n\nbody\n  background: bgcol "],"sourceRoot":"/source/"}
