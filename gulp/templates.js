@@ -1,9 +1,13 @@
 /*
+ * Build the jade templates.
+ */
+
+var paths = require('./paths.js');
+var gulp = require('gulp');
 var jade = require('gulp-jade');
 
-gulp.task('html', function(){
-  gulp.src('lib/index.jade')
+gulp.task('templates', ['clean'], function(){
+  gulp.src(paths.templates.src)
     .pipe(jade())
-    .pipe(gulp.dest('dist/'));
+    .pipe(gulp.dest(paths.templates.dest));
 });
-*/

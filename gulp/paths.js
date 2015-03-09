@@ -1,21 +1,31 @@
+var bowerPaths = require('./bowerPaths.js');
+
 module.exports = {
-  dest: 'dist/',
+  root: 'dist/',
   styles: {
-    all: 'lib/**/*.styl',
+    watch: 'lib/**/*.styl',
     src: 'lib/styles.styl',
     dest: 'dist/css'
   },
   scripts: {
+    watch: 'lib/**/*.js',
     src: 'lib/**/*.js',
     dest: 'dist/js'
   },
   templates: {
+    watch: 'lib/**/*.jade',
     src: 'lib/**/*.jade',
     dest: 'dist/'
   },
   vendor: {
+    styles: {
+      watch: 'bower_components/**/*.css',
+      src: bowerPaths.styles,
+      dest: 'dist/css'
+    },
     scripts: {
-      src: 'bower_components/angular/angular.js',
+      watch: 'bower_components/**/*.js',
+      src: bowerPaths.scripts,
       dest: 'dist/js'
     }
   }

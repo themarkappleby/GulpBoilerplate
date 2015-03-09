@@ -1,9 +1,13 @@
+/*
+ * Process application styles.
+ */
+ 
 var paths = require('./paths.js');
 var gulp = require('gulp');
 var stylus = require('gulp-stylus');
 var autoprefixer = require('gulp-autoprefixer');
 var notify = require('gulp-notify');
-//var concat = require('gulp-concat');
+var minify = require('gulp-minify-css');
 
 gulp.task('styles', ['clean'], function(){
   return gulp.src(paths.styles.src)
@@ -17,10 +21,3 @@ gulp.task('styles', ['clean'], function(){
     .pipe(autoprefixer())
     .pipe(gulp.dest(paths.styles.dest));
 });
-
-/*
-gulp.task('vendor:styles', function(){
-  gulp.src('bower_components/angular/angular.min.js')
-    .pipe(gulp.dest('dist/'));
-});
-*/
